@@ -1,0 +1,15 @@
+{
+   #
+   # 01arm_kernels
+   # Enable arm kernel repositories only on ARM-AltArch systems
+   #
+
+   if (( -e '/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-AltArch-Arm32' ) ||
+       ( -e '/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7-aarch64' )) {
+
+      push @repos, 'centos-kernel';
+
+   }
+   
+   '';
+}
