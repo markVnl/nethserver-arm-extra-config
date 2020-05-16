@@ -38,3 +38,6 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+
+* Fri 15 May 2020 Mark Verlinde <mark.verlinde@gmail.com> - 0.1.1
+- First (unreleased) rpm-build
