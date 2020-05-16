@@ -3,7 +3,7 @@
 
 Summary: Nethserver arm configuration
 Name: nethserver-arm-extra-config
-Version: 0.1
+Version: 1.0.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -24,13 +24,11 @@ rm -rf %{buildroot}
 (cd root; find . -depth -print | cpio -dump %{buildroot})
 %{genfilelist} %{buildroot} > %{name}-%{version}-filelist
 
-
 %post
 
 %preun
 
 %postun
-
 
 %files -f %{name}-%{version}-filelist
 %defattr(-,root,root)
@@ -39,5 +37,9 @@ rm -rf %{buildroot}
 
 %changelog
 
-* Fri 15 May 2020 Mark Verlinde <mark.verlinde@gmail.com> - 0.1.1
+* Sat May 16 2020 Mark Verlinde <mark.verlinde@gmail.com> - 1.1
+- Extended template expansion of /etc/nethserver/eorepo.conf
+  part of nethserver-base fixes, arm-dev #40
+
+* Fri May 15 2020 Mark Verlinde <mark.verlinde@gmail.com> - 0.1.1
 - First (unreleased) rpm-build
