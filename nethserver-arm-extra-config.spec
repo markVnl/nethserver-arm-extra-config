@@ -3,7 +3,7 @@
 
 Summary: Nethserver arm configuration
 Name: nethserver-arm-extra-config
-Version: 1.0.0
+Version: 1.1.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -36,8 +36,11 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+* Wed Dec 23 2020 Mark Verlinde <mark.verlinde@gmail.com> - 1.1.0
+- Disable NetworkManger and other (well-known) services during system-init,
+  NetworkManger and NetworkManger-wait-online are enbaled on fist-boot
 
-* Sat May 16 2020 Mark Verlinde <mark.verlinde@gmail.com> - 1.1
+* Sat May 16 2020 Mark Verlinde <mark.verlinde@gmail.com> - 1.0.0
 - Extended template expansion of /etc/nethserver/eorepo.conf
   part of nethserver-base fixes, arm-dev #40
 
