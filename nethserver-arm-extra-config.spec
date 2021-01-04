@@ -3,7 +3,7 @@
 
 Summary: Nethserver arm configuration
 Name: nethserver-arm-extra-config
-Version: 1.1.0
+Version: 1.1.1
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -36,6 +36,10 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+
+* Mon Jan 04 2021 Mark Verlinde <mark.verlinde@gmail.com> - 1.1.1
+- Disable NetworkManger and other (well-known) services at the end of system-init,
+
 * Wed Dec 23 2020 Mark Verlinde <mark.verlinde@gmail.com> - 1.1.0
 - Disable NetworkManger and other (well-known) services during system-init,
   NetworkManger and NetworkManger-wait-online are enbaled on fist-boot
