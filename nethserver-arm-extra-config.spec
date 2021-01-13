@@ -3,7 +3,7 @@
 
 Summary: Nethserver arm configuration
 Name: nethserver-arm-extra-config
-Version: 1.1.1
+Version: 1.1.2
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -36,6 +36,10 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+
+* Wed Jan 13 2021 Mark Verlinde <mark.verlinde@gmail.com> - 1.1.2
+- to keep network running and optain a IP from DHCP NM is stopped after system int
+- preset Networkmanager-wait-online is not stop, force stop of all units
 
 * Mon Jan 04 2021 Mark Verlinde <mark.verlinde@gmail.com> - 1.1.1
 - Disable NetworkManger and other (well-known) services at the end of system-init,
