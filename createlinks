@@ -47,7 +47,8 @@ event_services('nethserver-arm-extra-config-update', qw(
 #
 
 event_actions('system-init', qw(
-              arm-check-default-services 999
+              arm-check-default-services-pre-init 000
+              arm-check-default-services-post-init 999
 ));
 
 event_templates('system-init',  qw(

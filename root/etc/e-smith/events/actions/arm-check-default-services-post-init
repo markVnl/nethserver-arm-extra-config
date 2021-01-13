@@ -20,7 +20,7 @@
 #
 
 # Disable services from a default CentOS install
-for UNIT in NetworkManager NetworkManager-wait-online firewalld; do
+for UNIT in NetworkManager; do
     if systemctl is-active -q $UNIT; then
         systemctl stop $UNIT
     fi
