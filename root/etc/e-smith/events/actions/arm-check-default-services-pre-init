@@ -23,6 +23,7 @@
 for UNIT in NetworkManager-wait-online firewalld; do
     if systemctl is-active -q $UNIT; then
         systemctl stop $UNIT
+        systemctl disable $UNIT
     fi
     systemctl mask $UNIT 
 done
